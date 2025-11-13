@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patroli Siber</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        /* banner atas */
+        .top-banner {
+            background-color: #190028;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: left;
+            position: relative;
+        }
+
+        .top-banner video {
+            width: 100%;
+            height: 150px; /* Sesuaikan tinggi video di sini */
+            display: block;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+            pointer-events: none; /* Mencegah video diklik */
+        }
+
+        .banner-text {
+            padding: 10px;
+        }
+
+        .banner-text h2 {
+            font-size: 18px;
+            margin: 0 0 5px;
+            font-weight: 700;
+        }
+
+        .banner-text p {
+            font-size: 13px;
+            margin: 0 0 10px;
+            color: #ccc;
+        }
+
+        .banner-text button {
+            background: #7a2df8;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer; /* Menambahkan cursor pointer agar terlihat bisa diklik */
+        }
+
+        /* search bar + toggle */
+        .search-section {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar {
+            background: #111;
+            border-radius: 8px;
+            flex: 1;
+            margin-right: 10px;
+            padding: 10px;
+            color: #ccc;
+            font-size: 13px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-buttons label {
+            font-size: 12px;
+        }
+
+        .filter-buttons select {
+            background: #111;
+            color: #ccc;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 10px;
+            font-size: 12px;
+        }
+
+        /* results text */
+        .results {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* card list */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: #111;
+            border-radius: 10px;
+            width: calc(50% - 5px);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 10px;
+        }
+
+        .info h3 {
+            margin: 0;
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+
+        .info p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: #bbb;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* No Results */
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-banner">
+            <video autoplay loop muted playsinline>
+                <source src="snaptik_7550525544413154565_v2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+             <div class="banner-text">
+                <h2>TOOL AND EDUKASI CYBER</h2>
+                <p>edukasi bukan untuk di salah gunakan</p>
+                <button id="get-started-button">Get Started</button>
+            </div>
+        </div>
+        <div class="search-section">
+            <input class="search-bar" type="text" id="search-input" placeholder="Search Tool...">
+            <div class="filter-buttons">
+                <label><input type="checkbox" id="nsfw"></label>
+            </div>
+        </div>
+        <div class="results">pencet salah satu menu untuk menuju ke tujuan</div>
+        <div class="card-container" id="card-container">
+            <!-- Cards will be dynamically inserted here -->
+            <div class="card">
+                <a href="https://patrolisiber.id/?__cf_chl_rt_tk=ykR_A.WHarWQVcBH8HENPlDH8QEcRKtXei3oKCv8wFk-1763008918-1.0.1.1-D_JyLqlfrr5nDLs5aRV2nuf4GWuGOWCsNiRANnvSk98" target="_blank">
+                    <img src="ogy_advokat-20230830-0001.jpg" alt="Tool 1">
+                    <div class="info">
+                        <h3>PATROLI SIBER</h3>
+                        <p>melaporkan tindak kejahatan online</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.mediafire.com/folder/dalu7a5g9dho6/GALLERY+HACK+BY+DARK+LEGEND+³³³" target="_blank">
+                    <img src="istockphoto-1406645290-612x612.jpg" alt="Tool 2">
+                    <div class="info">
+                        <h3>HACK GALERY</h3>
+                        <p>hack galeri seseorang dengan phising</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.metasploit.com/" target="_blank">
+                    <img src="hqdefault.jpg" alt="Tool 3">
+                    <div class="info">
+                        <h3>METASPLOIT</h3>
+                        <p>penguji celah keamanan</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://github.com/vanhauser-thc/thc-hydra" target="_blank">
+                    <img src="images (9).jpeg" alt="Tool 4">
+                    <div class="info">
+                        <h3>HYDRA</h3>
+                        <p>brute force login (testi aman)</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.kali.org/" target="_blank">
+                    <img src="images (14).jpeg" alt="Tool 5">
+                    <div class="info">
+                        <h3>KALI LINUX</h3>
+                        <p>sistem operasi khusus pentesting</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://nmap.org/" target="_blank">
+                    <img src="images (11).jpeg" alt="Tool 6">
+                    <div class="info">
+                        <h3>NMAP</h3>
+                        <p>scanning port and deteksi jaringan</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.parrotsec.org/" target="_blank">
+                    <img src="images (13).jpeg" alt="Tool 7">
+                    <div class="info">
+                        <h3>PARROT OS</h3>
+                        <p>lebih ringan untuk ethical hacking</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://www.wireshark.org/" target="_blank">
+                    <img src="image_750x_68808d2ead4cd.webp" alt="Tool 8">
+                    <div class="info">
+                        <h3>WHIRESHARK</h3>
+                        <p>analisis jaringan dan paket data</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://github.com/lockfale/OSINT-Framework" target="_blank">
+                    <img src="OSINT-Framework.webp" alt="Tool 9">
+                    <div class="info">
+                        <h3>OSINT FRAMEWORK</h3>
+                        <p>information gathering colletion</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://github.com/LionSec/xerosploit" target="_blank">
+                    <img src="IMG_20251113_124348.jpg" alt="Tool 10">
+                    <div class="info">
+                        <h3>XEROSPLOIT</h3>
+                        <p>penetration testing toolkit</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://github.com/lanmaster53/recon-ng" target="_blank">
+                    <img src="hq720.jpg" alt="Tool 11">
+                    <div class="info">
+                        <h3>RECON -NG</h3>
+                        <p>web reconnaissance framework</p>
+                    </div>
+                </a>
+            </div>
+             <div class="card">
+                <a href="https://github.com/smicallef/spiderfoot" target="_blank">
+                    <img src="ca6lsryM_400x400.jpg" alt="Tool 12">
+                    <div class="info">
+                        <h3>SPIDERFOOT</h3>
+                        <p>osint automation tool</p>
+                    </div>
+                </a>
+            </div><div class="card">
+    <a href="https://www.tenable.com/products/nessus" target="_blank">
+        <img src="images (16).jpeg" alt="Tool 13">
+        <div class="info">
+            <h3>NESSUS</h3>
+            <p>pemindai kerentanan kelemahan system</p>
+        </div>
+    </a>
+</div>
+
+<div class="card">
+    <a href="https://www.kali.org/tools/armitage/" target="_blank">
+        <img src="hq720 (1).jpg" alt="Tool 14">
+        <div class="info">
+            <h3>armitage</h3>
+            <p>alat manajemen serangan siber berbasis GUI untuk metasploit.</p>
+        </div>
+    </a>
+</div>
+
+<div class="card">
+    <a href="https://sqlmap.org/" target="_blank">
+        <img src="sql map-1.jpg" alt="Tool 15">
+        <div class="info">
+            <h3>SQLMAP</h3>
+            <p>pengujian penetrasi otomatis untuk mendeteksi dan mengeksploitasi kerentanan SQL injection.</p>
+        </div>
+    </a>
+</div>
+
+<div class="card">
+    <a href="https://www.acunetix.com/" target="_blank">
+        <img src="image_650x434_676d24ce65a0c.webp" alt="Tool 16">
+        <div class="info">
+            <h3>ACUNETIX</h3>
+            <p>Pemindai kerentanan web otomatis untuk mengamankan aplikasi web</p>
+        </div>
+    </a>
+</div>
+     </div>
+        <div class="no-results" id="no-results" style="display: none;">Pencarian tidak tersedia</div>
+        <footer>
+            <p>masih dalam perkembangan</p>
+            <p>© SXYZ RAFF V2</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('search-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim();
+                const cardContainer = document.getElementById('card-container');
+                const noResults = document.getElementById('no-results');
+                // Di sini Anda akan menambahkan logika pencarian sesuai dengan tujuan yang Anda inginkan.
+                // Misalnya, Anda bisa mencari berdasarkan judul atau deskripsi card.
+                // Contoh sederhana: Jika input pencarian tidak kosong, tampilkan semua card; jika tidak, tampilkan pesan "Pencarian tidak tersedia".
+                if (searchTerm !== '') {
+                    cardContainer.style.display = 'flex'; // Menampilkan card
+                    noResults.style.display = 'none'; // Menyembunyikan pesan "Pencarian tidak tersedia"
+                } else {
+                    cardContainer.style.display = 'none'; // Menyembunyikan card
+                    noResults.style.display = 'block'; // Menampilkan pesan "Pencarian tidak tersedia"
+                }
+            }
+        });
+        // Menambahkan event listener untuk tombol "Get Started Free"
+        document.getElementById('get-started-button').addEventListener('click', function() {
+            // Scroll ke bawah halaman
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth' // Efek smooth scrolling
+            });
+        });
+    </script>
+</body>
+</html>
+
+          
